@@ -11,14 +11,14 @@ public class Spider extends Movable {
     private static final Random RND = new Random();
 
     public Spider(int size, float x, float y, int heading, int speed) {
-        super(size, x, y, ColorUtil.rgb(0, 0, 0), heading, speed, /*initialFoodLevel*/ 0);
+        super(size, x, y, ColorUtil.rgb(0, 0, 0), heading, speed, 0);
     }
 
-    /** Spiders cannot change color once created. */
+    // Spiders cannot change color once created. Do nothing
     @Override
     public final void setColor(int color) {}
 
-    /** Non-food consumer: block food level changes. */
+    // Non-food consumer: Do nothing
     @Override
     public final void setFoodLevel(int fl) {}
 

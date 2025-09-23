@@ -5,7 +5,7 @@ import com.codename1.charts.util.ColorUtil;
 
 /**
  * Base abstract class for all game objects.
- * Common attributes: immutable size, location (Point), and color (int).
+ * Common attributes: immutable size (int), location (Point), and color (int).
  * By default, subclasses may change location and color unless specifically restricted.
  */
 public abstract class GameObject {
@@ -37,18 +37,16 @@ public abstract class GameObject {
     /** @return current color as RGB int. */
     public int getColor() { return color; }
 
-    // Getters (overridable access policy in subclasses)
-    /** Set a new location; Fixed subclasses will override to block this. */
+    // Setters
     public void setLocation(float x, float y) {
         this.location.setX(x);
         this.location.setY(y);
     }
-    /** Set a new color; subclasses may override to block changes. */
     public void setColor(int color) { this.color = color; }
 
     @Override
     public String toString() {
-        // Per CN1 Notes, show one digit after decimal using Math.round trick.
+        // CN1 trick to show one digit after decimal using Math.round
         float rx = Math.round(getX() * 10f) / 10f;
         float ry = Math.round(getY() * 10f) / 10f;
         return "loc=" + rx + "," + ry

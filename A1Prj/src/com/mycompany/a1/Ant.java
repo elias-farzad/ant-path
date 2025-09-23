@@ -16,7 +16,7 @@ public class Ant extends Movable implements IFoodie {
     private int lastFlagReached = 1; // starts at flag #1
 
     public Ant(int size, float x, float y, int heading, int speed, int maximumSpeed, int foodConsumptionRate) {
-        super(size, x, y, ColorUtil.rgb(255, 0, 0), heading, speed, /*initialFoodLevel*/ 100);
+        super(size, x, y, ColorUtil.rgb(255, 0, 0), heading, speed, 100);
         this.maximumSpeed = Math.max(1, maximumSpeed);
         this.foodConsumptionRate = Math.max(1, foodConsumptionRate);
     }

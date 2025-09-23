@@ -21,7 +21,7 @@ public class Game extends Form {
         play();
     }
 
-    /** Set up input field and map keystrokes to world actions per spec. */
+    /** Set up input field and map keystrokes to world actions. */
     private void play() {
         Label prompt = new Label("Enter a Command:");
         final TextField input = new TextField();
@@ -67,7 +67,6 @@ public class Game extends Form {
                         System.out.println("Are you sure you want to quit? (y/n)");
                         break;
                     default:
-                        // digits 1..9 are pretend flag collisions
                         if (c >= '1' && c <= '9') {
                             gw.collideFlag(c - '0');
                         } else {

@@ -5,7 +5,7 @@ import java.util.Vector;
 
 /**
  * Game model: holds world state and objects and exposes operations invoked by controller.
- * Keeps track of lives and clock, and implements all commands required by the spec.
+ * Keeps track of lives and clock, and implements all commands.
  */
 public class GameWorld {
     public static final int WORLD_WIDTH = 1000;

@@ -9,7 +9,7 @@ public abstract class Movable extends GameObject {
     private int heading;
     /** Speed in arbitrary units per tick. */
     private int speed;
-    /** Current food level; may be blocked for non-food consumers. */
+    /** Current food level */
     private int foodLevel;
 
     protected Movable(int size, float x, float y, int color, int heading, int speed, int initialFoodLevel) {

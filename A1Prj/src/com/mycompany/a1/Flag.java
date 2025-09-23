@@ -15,7 +15,7 @@ public class Flag extends Fixed {
 
     public int getSequenceNumber() { return sequenceNumber; }
 
-    /** Flags cannot change color once created. */
+    // Flags cannot change color once created. Do nothing
     @Override
     public final void setColor(int color) {}
 
